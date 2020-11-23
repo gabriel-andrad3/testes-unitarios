@@ -14,5 +14,9 @@ describe('Calculadora', function() {
         it('deve retorna a multiplicacao de dois números', function() {
             assert.equal(calculadora.multiplicacao(3,2), 6);
         })
+
+        it('deve retorna a divisao de dois números', function() {
+            assert.equal(calculadora.divisao(3,2), 1.5);
+        })
     })
 })
