@@ -4,7 +4,7 @@
   "description": "\u0016Estudos de testes unitários utilizando JavaScript com Mocha e Chai para o Programa de Mentoria Sensedia.",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
