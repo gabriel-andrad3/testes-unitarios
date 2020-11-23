@@ -1,0 +1,27 @@
+{
+  "name": "testes-unitarios",
+  "version": "1.0.0",
+  "description": "\u0016Estudos de testes unitários utilizando JavaScript com Mocha e Chai para o Programa de Mentoria Sensedia.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielAndrade00/testes-unitarios.git"
+  },
+  "keywords": [
+    "test",
+    "js"
+  ],
+  "author": "Gabriel Andrade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielAndrade00/testes-unitarios/issues"
+  },
+  "homepage": "https://github.com/gabrielAndrade00/testes-unitarios#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
