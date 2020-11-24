@@ -12,7 +12,11 @@ function multiplicacao(a, b) {
     return a*b; 
 }
 
-function divisao(a, b) { return a/b; }
+function divisao(a, b) {
+    if (typeof(a) != "number" || typeof(b) != "number")
+        throw "Parâmetros devem ser números"; 
+    return a/b; 
+}
 
 module.exports = {
     soma,
