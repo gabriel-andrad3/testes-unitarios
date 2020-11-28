@@ -6,5 +6,9 @@ describe('Calculadora', function() {
         it('deve retorna a soma de dois números', function() {
             assert.equal(calculadora.soma(3,2), 5);
         })
+
+        it('deve retorna a subtracao de dois números', function() {
+            assert.equal(calculadora.subtracao(3,2), 1);
+        })
     })
 })
