@@ -1,20 +1,24 @@
-function soma(a, b) { return a+b; }
+function soma(a, b) { 
+    if (Number(a) == NaN || Number(b) == NaN)
+        throw new Error("Parâmetros devem ser números");
+    return Number(a)+Number(b); 
+}
 
 function subtracao(a, b) { 
-    if (typeof(a) != "number" || typeof(b) != "number")
-        throw "Parâmetros devem ser números";
-    return a-b;
+    if (Number(a) == NaN || Number(b) == NaN)
+        throw new Error("Parâmetros devem ser números");
+    return a-b;    
 }
 
 function multiplicacao(a, b) { 
-    if (typeof(a) != "number" || typeof(b) != "number")
-        throw "Parâmetros devem ser números";
+    if (Number(a) == NaN || Number(b) == NaN)
+        throw new Error("Parâmetros devem ser números");
     return a*b; 
 }
 
 function divisao(a, b) {
-    if (typeof(a) != "number" || typeof(b) != "number")
-        throw "Parâmetros devem ser números"; 
+    if (Number(a) == NaN || Number(b) == NaN)
+        throw new Error("Parâmetros devem ser números");
     return a/b; 
 }
 
