@@ -2,9 +2,10 @@
   "name": "testes-unitarios",
   "version": "1.0.0",
   "description": "\u0016Estudos de testes unitários utilizando JavaScript com Mocha e Chai para o Programa de Mentoria Sensedia.",
-  "main": "app.js",
+  "main": "calculadora.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "node src/calculadora.js"
   },
   "repository": {
     "type": "git",

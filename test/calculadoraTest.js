@@ -12,22 +12,28 @@ describe('Calculadora', function() {
             assert.equal(calculadora.soma(-3,2), -1);
         })
 
-        it('não deve aceitar números como string', function() {
-            assert.notEqual(calculadora.soma(-3,"-2"), -5);
+        it('não deve aceitar letras', function() {
+            assert.equal(calculadora.soma(-3,"-2"), -5);
         })
     })
 
     context('subtracao', function() {        
         it('com números positivos deve ser OK', function() {
-            assert.equal(calculadora.subtracao(3,2), 1);
+            const result = calculadora.subtracao(3,2);
+            assert.equal(result, 1);
         })
 
         it('com números negativos deve ser OK', function() {
-            assert.equal(calculadora.subtracao(-3,2), -5);
+            const result = calculadora.subtracao(-3,2);
+            assert.equal(result, -5);
         })
 
-        it('não deve aceitar números como string', function() {
-            assert.throws(calculadora.subtracao(-3,"-2"), 'triste');
+        it('não deve aceitar letras', function() {
+            try {
+                calculadora.subtracao(-3,"-2");
+            } catch(error) {
+                assert.equal(error.message, 'Parâmetros devem ser números');
+            }
         })                 
     })
 
@@ -40,8 +46,13 @@ describe('Calculadora', function() {
             assert.equal(calculadora.multiplicacao(-3,-2), 6);
         })
 
-        it('não deve aceitar números como string', function() {
-            assert.throws(calculadora.multiplicacao(-3,"-2"), 6);
+        it('não deve aceitar letras', function() {
+            try {
+                calculadora.multiplicacao(-3,"-2");
+            }
+            catch (error) {
+                assert.equal(error.message, "Parâmetros devem ser números");
+            }            
         })                   
     })
 
@@ -54,8 +65,13 @@ describe('Calculadora', function() {
             assert.equal(calculadora.divisao(-3,-2), 1.5);
         })
 
-        it('não deve aceitar números como string', function() {
-            assert.throws(calculadora.divisao(-3,"-2"), 1.5);
+        it('não deve aceitar letras', function() {
+            try {
+                calculadora.multiplicacao(-3,"-2");
+            }
+            catch (error) {
+                assert.equal(error.message, "Parâmetros devem ser números");
+            }              
         })    
           
         it('com divisor 0 deve ser Infinito', function() {
